@@ -296,7 +296,7 @@ final class MatrixEngine {
             if !drops[i].active {
                 // Occasionally enable a dead column
                 if CGFloat.random(in: 0...1) < 0.004 {
-                    drops[i] = makeDrop(atBaseX: drops[i].baseX, layer: drops[i].layer) // ✅ use baseX
+                    drops[i] = makeDrop(atBaseX: drops[i].baseX, layer: drops[i].layer)
                 }
                 continue
             }
@@ -315,7 +315,7 @@ final class MatrixEngine {
             // Reset after tail fully offscreen
             let tailYDown = drops[i].headY - CGFloat(trailLen - 1) * charH
             if tailYDown > bounds.height + charH {
-                drops[i] = makeDrop(atBaseX: drops[i].baseX, layer: drops[i].layer) // ✅ use baseX
+                drops[i] = makeDrop(atBaseX: drops[i].baseX, layer: drops[i].layer)
             }
         }
     }
